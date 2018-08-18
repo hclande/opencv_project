@@ -7,9 +7,9 @@ pickle,
 pillow,
 os,
 
-# This project has been made by following the opencv tutorial from
 
-# joincfe.com
+## This project has been made by following the opencv tutorial from
+## joincfe.com
 
 
 
@@ -20,7 +20,7 @@ os,
 
 
 
-# cap-img.py
+## cap-img.py
 
 
 to capture images for data base, run cap-img.py
@@ -28,29 +28,29 @@ type in the name of the subject, this will be the name of the image folder.
 this will capture images every 500ms, in total 50 images per use.
 this file can be used several times pr.subject, image numbering will continue from last image number. 
 
-# faces-train.py
+## faces-train.py
 
 this file sets up the recognition data, to be used by face.py
 after new photos has been added to the images folder this trainner has to be executed.
 
 
-# faces.py
+## faces.py
 
 this is the face recognition script.
 
-# camera-test.py
+## camera-test.py
 
 just for testing of camera
 
 
-# trainner.yml
+## trainner.yml
 
 this is the recognition database file
 
-# labels.pickel
+## labels.pickel
 
 this is the image labels and subject name data file.
 
-# cascade folder
+## cascade folder
 
 this folder contains the different types of image identification
