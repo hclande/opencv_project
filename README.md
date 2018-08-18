@@ -1,22 +1,17 @@
 # opencv_project
 
+This project has been made by following the opencv tutorial from joincfe.com
+These files uses any webcamera that are properly set up to the computer.
+there is no need for any additional setup for the camera to run any of these files.
+
+
+
 modules used for this project:
 opencv (cv2),
 numpy,
 pickle,
 pillow,
 os,
-
-
-## This project has been made by following the opencv tutorial from
-## joincfe.com
-
-
-
-## These files uses any webcamera that are properly set up to the computer.
-## there is no need for any setup for the camera to run any of these files.
-
-
 
 
 
