@@ -5,7 +5,7 @@ import os
 import time
 
 cap = cv2.VideoCapture(0)
-name = input("name:")
+name = input("name:")                       # get the name of the subject
 num = 0
 
 
@@ -18,7 +18,7 @@ def capture(name,num,start):
     num = len(os.listdir(img_dir)) + 1 # counts number of files in image path and adds one to num
 
         
-    og_num = num
+    og_num = num                                # get the current number of files in directory
 
     while(True):
         print(num)
@@ -38,17 +38,20 @@ def capture(name,num,start):
         
         if not os.path.exists(img_dir):         # if directory is not there, make the directory
             os.makedirs(img_dir)
-        if start + 0.5 < time.time():
+        
+        if start + 0.5 < time.time():           # captures images every 0,5sec
             if img != " ":
                 cv2.destroyWindow("capture")
-            cv2.imwrite(img_item, gray)
-            print (img_item)
-            img = cv2.imread(img_item,-1)
-            cv2.imshow("capture",img)
-            num += 1
-            start = time.time()
+
+
+            cv2.imwrite(img_item, gray)         #saves image 
+            print (img_item)                    
+            img = cv2.imread(img_item,-1)       #reads saved image
+            cv2.imshow("capture",img)           #displays saved image in second frame
+            num += 1                            # adds number of  image
+            start = time.time()                 #resets time for next image
         
-        if num == (og_num + 50) or cv2.waitKey(20) & 0xFF == ord('q'):
+        if num == (og_num + 50) or cv2.waitKey(20) & 0xFF == ord('q'): # quits program after 50 images or if q is pressed
             break
 
 
@@ -64,9 +67,4 @@ capture(name,num,start)
 
 cap.release()
 cv2.destroyAllWindows()
-#t1 = threading.Thread( target= show() )
-#t2 = threading.Thread( target= capture(name,num) )
-
-#t1.start()
-#t2.start()
 # When everything done, release the capture

@@ -22,7 +22,8 @@ for root, dirs, files in os.walk(image_dir):                #searches all direct
             label = os.path.basename(os.path.dirname(path)).replace(" ","-").lower() # label = name of the person in picture/ name of picture folder
             #print (label,path)        
 
-            if not label in label_ids:                      # if label/ picture folder is not in label_ids list
+            if not label in label_ids:            
+                          # if label/ picture folder is not in label_ids list
                 label_ids[label] = current_id               # add an ID to the person/ image folder to label dictonary
                 current_id += 1                             # increments the current ID number, (ready for next person)
             
