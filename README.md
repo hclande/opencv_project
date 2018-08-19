@@ -17,7 +17,6 @@ os,
 
 ## cap-img.py
 
-
 to capture images for data base, run cap-img.py
 type in the name of the subject, this will be the name of the image folder.
 this will capture images every 500ms, in total 50 images per use.
@@ -25,6 +24,7 @@ this file can be used several times pr.subject, image numbering will continue fr
 
 
 ##Capture-unknown-faces.py
+
 this script are basically the same as faces.py. Except that this captures photos of all unknown faces and stores them under \images folder\unknown-subject_"timestamp".png 
 
 
