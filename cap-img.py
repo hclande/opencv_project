@@ -1,10 +1,22 @@
+"""
+this script will take grayscale images of a subject. 
+it will ask for the subjet name, this will be the folder name wich the images are stored in:
+\images\"subject name"\
+and number of pictures that are to be taken.
+
+script can be cancled by pressing q while running.
+
+Based on opencv tutorial by joincfe.com
+"""
+
 import numpy as np
 import cv2
 import os
 import time
 
 cap = cv2.VideoCapture(0)
-name = input("name:")                       # get the name of the subject
+name = input("name:")
+num_photo= input("how many photos?:")                       # get the name of the subject
 num = 0
 
 
@@ -50,7 +62,7 @@ def capture(name,num,start):
             num += 1                            # adds number of  image
             start = time.time()                 #resets time for next image
         
-        if num == (og_num + 50) or cv2.waitKey(20) & 0xFF == ord('q'): # quits program after 50 images or if q is pressed
+        if num == (og_num + int(num_photo)) or cv2.waitKey(20) & 0xFF == ord('q'): # quits program after number of images or if q is pressed
             break
 
 

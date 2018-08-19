@@ -1,3 +1,9 @@
+"""
+this file will open a frame showing video feed from webcamera, detect and identify faces
+wich has been previously trained with "faces-train.py"
+
+Based on opencv tutorial by joincfe.com
+"""
 import numpy
 import cv2
 import pickle

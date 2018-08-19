@@ -1,3 +1,14 @@
+"""
+this file will open a frame showing video feed from webcamera, detect and identify faces
+wich has been previously trained with "faces-train.py"
+
+grayscale photos of unrecognized faces will be stored in \images\ folder with 
+file name unknown-subject_"timestamp".png 
+
+Based on opencv tutorial by joincfe.com
+"""
+
+
 import numpy
 import cv2
 import pickle
