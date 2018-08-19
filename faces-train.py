@@ -13,7 +13,7 @@ label_ids = {}
 y_labels = []
 x_train = []
 
-
+print("This could take some time, depending on how many reference images you have.")
 
 for root, dirs, files in os.walk(image_dir):                #searches all directories beyond the image directory 
     for file in files:                                      #
@@ -31,7 +31,9 @@ for root, dirs, files in os.walk(image_dir):                #searches all direct
            # print(label_ids)
             
             pil_image= Image.open(path).convert("L")        # turn image in to gray scale
-            image_array = np.array(pil_image, "uint8")      # turn image in to an nubmer array(pixel data)
+            size = (550,550)
+            final_image = pil_image.resize(size, Image.ANTIALIAS)
+            image_array = np.array(final_image, "uint8")      # turn image in to an nubmer array(pixel data)
             #print(image_array)
             faces = face_cascade.detectMultiScale(image_array, scaleFactor=1.5, minNeighbors=5)
            

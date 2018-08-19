@@ -26,6 +26,8 @@ def capture(name,num,start):
     img_dir = str("images\\" + name + "\\" )                                     #directory path
     img_item = str("images\\" + name + "\\" + name + "_" + str(num) +" .png")
     print (img_dir)
+    if not os.path.exists(img_dir):         # if directory is not there, make the directory
+        os.makedirs(img_dir)
     num = len(os.listdir(img_dir)) + 1 # counts number of files in image path and adds one to num
 
         
@@ -47,8 +49,7 @@ def capture(name,num,start):
         img_item = str("images\\" + name + "\\" + name + "_" + str(num) +".png")    #directory path and file name
         
         
-        if not os.path.exists(img_dir):         # if directory is not there, make the directory
-            os.makedirs(img_dir)
+        
         
         if start + 0.5 < time.time():           # captures images every 0,5sec
             if img != " ":

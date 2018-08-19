@@ -4,6 +4,7 @@ wich has been previously trained with "faces-train.py"
 
 Based on opencv tutorial by joincfe.com
 """
+
 import numpy
 import cv2
 import pickle
