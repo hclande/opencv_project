@@ -26,8 +26,6 @@ use PIP to install modules:
         
         pip install numpy --upgrade
         
-        pip install pickle --upgrade
-        
         pip install pillow --upgrade
         
 
