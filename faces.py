@@ -31,9 +31,10 @@ while(True):
 
         #recognize opencv recognizer
         id_ , conf = recognizer.predict(roi_gray) # id_ and conf= confidence level of recognizer 
-        if conf >= 60 and conf <= 85 :
-            print(id_)
-            print(labels[id_])
+        if conf >= 45 :#and conf <= 85 :
+            print(labels[id_] + ":" + str(conf) + "'%'")
+            #print(id_)
+            #print(labels[id_])
             font = cv2.FONT_HERSHEY_SIMPLEX
             name = labels[id_]
             color = (255,255,255)
