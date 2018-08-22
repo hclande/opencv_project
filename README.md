@@ -22,7 +22,7 @@ download and install python from pyton.org, make shure to tick of "add python to
 
 use PIP to install modules:
 
-        pip install opencv-python --upgrade
+        python -m pip install opencv-contrib-python
         
         pip install numpy --upgrade
         
