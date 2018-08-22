@@ -29,13 +29,15 @@ while(True):
 
 
     profile = profile_cascade.detectMultiScale(gray, scaleFactor=1.5, minNeighbors=5)
+
     for (xp,yp,wp,hp) in profile:
         print(xp,yp,wp,hp)
-        roi_gray = gray[yp:yp+hp, xp:xp+wp]
+        roi_profile_gray = gray[yp:yp+hp, xp:xp+wp]
         roi_profile_color = frame[yp:yp+hp, xp:xp+wp]
         cv2.rectangle(roi_profile_color,(xp,yp),(xp+wp, yp+hp),(255,0,0),2)
 
     faces = face_cascade.detectMultiScale(gray, scaleFactor=1.5, minNeighbors=5)
+    
     for (x,y,w,h) in faces:
         #print(x,y,w,h)
         roi_gray = gray[y:y+h, x:x+w]
