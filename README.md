@@ -21,10 +21,13 @@ this project was made with python version 3.7.0 and opencv version 3.4.2
 download and install python from pyton.org, make shure to tick of "add python to path" while installing.
 
 use PIP to install modules:
+
         pip install opencv-python --upgrade
+        
         pip install numpy --upgrade
-        pip install pickle --upgrade
+        
         pip install pillow --upgrade
+        
 
 download this repository and unpack to desired folder.
 add reference pictures of faces in named folders in \images\"name_of_subject"
